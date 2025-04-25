@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Start Celery Worker",
+        "type": "shell",
+        "command": "celery",
+        "args": ["-A", "app.transcription_task", "worker", "--loglevel=info"],
+        "problemMatcher": []
+      }
+    ]
+  }
