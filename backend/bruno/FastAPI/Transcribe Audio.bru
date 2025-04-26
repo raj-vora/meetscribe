@@ -7,10 +7,10 @@ meta {
 post {
   url: {{baseUrl}}/transcribe
   body: multipartForm
-  auth: none
+  auth: inherit
 }
 
 body:multipart-form {
   file: 
-  file: @file(D:\projects\meetscribe\DIALOGUE.oga)
+  file: @file(D:\projects\meetscribe\DIALOGUE.wav)
 }

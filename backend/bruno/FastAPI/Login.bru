@@ -16,3 +16,8 @@ body:json {
     "password": "rajvora"
   }
 }
+
+script:post-response {
+  access_token = res.body.access_token;
+  bru.setEnvVar("access_token", access_token);
+}
