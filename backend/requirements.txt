@@ -6,6 +6,7 @@ python-multipart
 python-jose[cryptography]
 passlib[bcrypt]
 pydantic
+pydantic[email]
 whisper
 pyannote.audio
 celery

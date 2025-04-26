@@ -1,18 +1,16 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException
 from jose import jwt
 from passlib.context import CryptContext
-from app.schemas import UserIn, UserOut
+from app.schemas import UserIn
 from app.utils.auth import create_access_token, authenticate_user
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 
-SECRET_KEY = "supersecret"
-ALGORITHM = "HS256"
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 auth_router = APIRouter()
 client = AsyncIOMotorClient(os.environ.get("MONGO_URI"))
-db = client["transcription"]
+db = client["meetscribe"]
 
 @auth_router.post("/signup")
 async def signup(user: UserIn):

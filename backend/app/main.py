@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from app.routes import meetings, transcribe
 from app.auth import auth_router
 from dotenv import load_dotenv
-import os
 
 load_dotenv()
 

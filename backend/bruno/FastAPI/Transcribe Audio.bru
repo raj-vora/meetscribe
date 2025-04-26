@@ -1,0 +1,16 @@
+meta {
+  name: Transcribe Audio
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/transcribe
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  file: 
+  file: @file(D:\projects\meetscribe\DIALOGUE.oga)
+}

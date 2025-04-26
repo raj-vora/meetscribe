@@ -1,0 +1,15 @@
+meta {
+  name: Get Transcription
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/meetings/:id/transcription
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 
+}
